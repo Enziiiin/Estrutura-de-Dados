@@ -5,6 +5,7 @@
 int main(){
 
     int whileBreak = 0;
+    Fila f = Iniializar();
 
     while(whileBreak == 0){
         printf("Escolha uma opcao: \n");
@@ -13,7 +14,6 @@ int main(){
         printf("3 - Imprimir a fila \n");
         printf("4 - Sair \n");
 
-        Fila f = Iniializar();
         int opcao;
         scanf("%d", &opcao);
 
@@ -46,9 +46,7 @@ int main(){
             printf("Opcao invalida \n");
             break;
         }
-
-
     }
-    
-
+    f = Destruir(f);
+    return 0;
 }
